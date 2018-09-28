@@ -1,0 +1,30 @@
+count=0
+class Matrix :
+
+    def __init__(self,data = None ):
+        if data is None:
+            self.data=[[0]]
+        else:
+            self.data=data
+
+    def rows(self):
+        return len(self.data)
+
+    def cols(self):
+        x=[]
+        x=len(self.data[0])
+        return x
+
+    def dim(self):
+        x=str(len(self.data))+'x'+str(len(self.data[0]))
+        return x
+
+    def get_id(self):
+        global count
+        count+=1
+        return count-1
+
+    def description(self):
+        for i in range (len(self.data)):
+            print(self.data[i])
+a=Matrix([[1,2,3],[4,5,6]])
